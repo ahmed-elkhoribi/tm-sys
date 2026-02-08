@@ -1,0 +1,6 @@
+{
+    "User": true,
+    "Task": true,
+    "Comment": true,
+    "Notification": true
+}
