@@ -116,6 +116,66 @@ php artisan queue:work
 
 **Important**: The queue worker must be running for email notifications to be sent. Email notifications are processed asynchronously through the queue system.
 
+## Postman Collection
+
+A complete Postman collection is provided in the `Docs/` folder for easy API testing. The collection includes all API endpoints with pre-configured requests and examples.
+
+### Importing Postman Collection and Environment
+
+1. **Import the Environment**:
+   - Open Postman
+   - Click on "Environments" in the left sidebar
+   - Click "Import" button
+   - Select the file: `Docs/task_sys.postman_environment.json`
+   - The environment will be imported as "task_sys"
+
+2. **Import the Collection**:
+   - Click on "Collections" in the left sidebar
+   - Click "Import" button
+   - Select the file: `Docs/Task Manager.postman_collection.json`
+   - The collection will be imported as "Task Manager"
+
+3. **Configure the Environment**:
+   - Select the "task_sys" environment from the environment dropdown (top right)
+   - Click on the environment name to edit it
+   - Set the `base_url` variable to your application URL:
+     - For local development with Laravel Herd: `http://task-manager.test` (or your Herd domain)
+     - For Laravel Sail: `http://localhost`
+     - For custom setup: Your application's base URL (e.g., `http://localhost:8000`)
+   - Save the environment
+
+### Using the Collection
+
+Once imported and configured:
+
+1. **Select the Environment**: Make sure "task_sys" is selected in the environment dropdown (top right of Postman)
+
+2. **Test Authentication**:
+   - Start with "Users → Register User" to create a new account
+   - Use "Users → Login" to get an authentication token
+   - Copy the token from the response
+
+3. **Set Authentication Token**:
+   - After logging in, the token is automatically saved to the environment variable `token` (if configured in the collection)
+   - Or manually set it: Go to "task_sys" environment → Add variable `token` → Paste your token value
+   - All authenticated requests will automatically use this token
+
+4. **Explore Endpoints**:
+   - The collection is organized by modules: Users, Tasks, Comments, Notifications
+   - Each endpoint includes example request bodies
+   - Modify the examples as needed for your testing
+
+### Collection Structure
+
+The Postman collection includes:
+
+- **Users**: Registration, Login, Logout
+- **Tasks**: CRUD operations, List tasks, Get assigned tasks
+- **Comments**: Create, Update, Delete, List comments for a task
+- **Notifications**: Full CRUD operations for notifications
+
+All endpoints use the `{{base_url}}` environment variable, so you only need to update it once in the environment settings.
+
 ## Project Structure
 
 The project uses a modular architecture with the following modules:

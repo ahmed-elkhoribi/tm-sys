@@ -1,0 +1,1611 @@
+{
+  "info": {
+    "_postman_id": "12df4836-94eb-444c-b78f-0f1f39dffc1c",
+    "name": "Task Manager",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48495445",
+    "_collection_link": "https://go.postman.co/collection/48495445-12df4836-94eb-444c-b78f-0f1f39dffc1c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\": \"John Doe\",\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/register",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "register"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Register User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"name\": \"John Doe 2\",\r\n    \"email\": \"john2@example.com\",\r\n    \"password\": \"password123\",\r\n    \"password_confirmation\": \"password123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/register",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "register"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:16:19 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"User registered successfully\",\n    \"data\": {\n        \"user\": {\n            \"id\": 2,\n            \"name\": \"John Doe 2\",\n            \"email\": \"john2@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:16:19.000000Z\",\n            \"updated_at\": \"2026-02-08T12:16:19.000000Z\"\n        },\n        \"token\": \"4|UAC74W7Ha8AELY54rqICQ4zVnAkknbbilAptzQBJ8d0ff09c\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"password123\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/login",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "login"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Login User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"email\": \"john@example.com\",\r\n    \"password\": \"password123\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/login",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "login"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:11:00 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Login successful\",\n    \"data\": {\n        \"user\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"token\": \"3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Logout User",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "2|MgZkesC3zGndYr8SPaLKHLBHcz8rE0GJRPpyE7xi53609b2c",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/logout",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "logout"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Logout User",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/logout",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "logout"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:10:28 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Logged out successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Tasks",
+      "item": [
+        {
+          "name": "List Tasks",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "List Tasks",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:19:10 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 3,\n            \"title\": \"Updated title\",\n            \"description\": \"Finish the task management system\",\n            \"status\": \"in-progress\",\n            \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"assignee\": {\n                \"id\": 2,\n                \"name\": \"John Doe 2\",\n                \"email\": \"john2@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:16:19.000000Z\",\n                \"updated_at\": \"2026-02-08T12:16:19.000000Z\"\n            },\n            \"comments\": [],\n            \"created_at\": \"2026-02-08T12:16:32.000000Z\",\n            \"updated_at\": \"2026-02-08T12:19:02.000000Z\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"Complete project\",\n            \"description\": \"Finish the task management system\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"assignee\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"comments\": [],\n            \"created_at\": \"2026-02-08T12:15:14.000000Z\",\n            \"updated_at\": \"2026-02-08T12:15:14.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"title\": \"Complete project\",\n            \"description\": \"Finish the task management system\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"assignee\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"comments\": [],\n            \"created_at\": \"2026-02-08T12:13:53.000000Z\",\n            \"updated_at\": \"2026-02-08T12:13:53.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://task-manager.localhost/api/v1/tasks?page=1\",\n        \"last\": \"http://task-manager.localhost/api/v1/tasks?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://task-manager.localhost/api/v1/tasks?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://task-manager.localhost/api/v1/tasks\",\n        \"per_page\": 15,\n        \"to\": 3,\n        \"total\": 3\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Complete project\",\r\n    \"description\": \"Finish the task management system\",\r\n    \"status\": \"pending\",\r\n    \"due_date\": \"2026-10-31 23:59:59\",\r\n    \"assignee_id\": 1\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Task",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Init project\",\r\n    \"description\": \"Finish the task management system\",\r\n    \"status\": \"pending\",\r\n    \"due_date\": \"2026-10-31 23:59:59\",\r\n    \"assignee_id\": 2\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:16:32 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Task created successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Init project\",\n        \"description\": \"Finish the task management system\",\n        \"status\": \"pending\",\n        \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"assignee\": {\n            \"id\": 2,\n            \"name\": \"John Doe 2\",\n            \"email\": \"john2@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:16:19.000000Z\",\n            \"updated_at\": \"2026-02-08T12:16:19.000000Z\"\n        },\n        \"created_at\": \"2026-02-08T12:16:32.000000Z\",\n        \"updated_at\": \"2026-02-08T12:16:32.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Show Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Show Task",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/3",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:19:15 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Updated title\",\n        \"description\": \"Finish the task management system\",\n        \"status\": \"in-progress\",\n        \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"assignee\": {\n            \"id\": 2,\n            \"name\": \"John Doe 2\",\n            \"email\": \"john2@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:16:19.000000Z\",\n            \"updated_at\": \"2026-02-08T12:16:19.000000Z\"\n        },\n        \"comments\": [],\n        \"created_at\": \"2026-02-08T12:16:32.000000Z\",\n        \"updated_at\": \"2026-02-08T12:19:02.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Updated title\",\r\n    \"status\": \"in-progress\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Task",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"title\": \"Updated title\",\r\n    \"status\": \"in-progress\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/3",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:19:02 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Task updated successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"title\": \"Updated title\",\n        \"description\": \"Finish the task management system\",\n        \"status\": \"in-progress\",\n        \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"assignee\": {\n            \"id\": 2,\n            \"name\": \"John Doe 2\",\n            \"email\": \"john2@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:16:19.000000Z\",\n            \"updated_at\": \"2026-02-08T12:16:19.000000Z\"\n        },\n        \"created_at\": \"2026-02-08T12:16:32.000000Z\",\n        \"updated_at\": \"2026-02-08T12:19:02.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/1",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "1"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Task",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/1",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "1"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:20:40 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Task deleted successfully\"\n}"
+            }
+          ]
+        },
+        {
+          "name": "Get Tasks Assigned to Me",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/assigned-to-me",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "assigned-to-me"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Get Tasks Assigned to Me",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/assigned-to-me",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "assigned-to-me"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:21:44 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"title\": \"Complete project\",\n            \"description\": \"Finish the task management system\",\n            \"status\": \"pending\",\n            \"due_date\": \"2026-10-31T23:59:59.000000Z\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"assignee\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"comments\": [],\n            \"created_at\": \"2026-02-08T12:15:14.000000Z\",\n            \"updated_at\": \"2026-02-08T12:15:14.000000Z\"\n        }\n    ],\n    \"links\": {\n        \"first\": \"http://task-manager.localhost/api/v1/tasks/assigned-to-me?page=1\",\n        \"last\": \"http://task-manager.localhost/api/v1/tasks/assigned-to-me?page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"meta\": {\n        \"current_page\": 1,\n        \"from\": 1,\n        \"last_page\": 1,\n        \"links\": [\n            {\n                \"url\": null,\n                \"label\": \"&laquo; Previous\",\n                \"page\": null,\n                \"active\": false\n            },\n            {\n                \"url\": \"http://task-manager.localhost/api/v1/tasks/assigned-to-me?page=1\",\n                \"label\": \"1\",\n                \"page\": 1,\n                \"active\": true\n            },\n            {\n                \"url\": null,\n                \"label\": \"Next &raquo;\",\n                \"page\": null,\n                \"active\": false\n            }\n        ],\n        \"path\": \"http://task-manager.localhost/api/v1/tasks/assigned-to-me\",\n        \"per_page\": 15,\n        \"to\": 1,\n        \"total\": 1\n    }\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "Comments on Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/3/comments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "3",
+                "comments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Comments on Task",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/3/comments",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "3",
+                    "comments"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:26:14 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"data\": [\n        {\n            \"id\": 2,\n            \"content\": \"This is another comment\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"task_id\": 3,\n            \"created_at\": \"2026-02-08T12:26:09.000000Z\",\n            \"updated_at\": \"2026-02-08T12:26:09.000000Z\"\n        },\n        {\n            \"id\": 1,\n            \"content\": \"This is a comment\",\n            \"author\": {\n                \"id\": 1,\n                \"name\": \"John Doe\",\n                \"email\": \"john@example.com\",\n                \"email_verified_at\": null,\n                \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n                \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n            },\n            \"task_id\": 3,\n            \"created_at\": \"2026-02-08T12:25:20.000000Z\",\n            \"updated_at\": \"2026-02-08T12:25:20.000000Z\"\n        }\n    ]\n}"
+            }
+          ]
+        },
+        {
+          "name": "Create Comment on Task",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\": \"This is another comment \"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/tasks/3/comments",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "tasks",
+                "3",
+                "comments"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Create Comment on Task",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"content\": \"This is a comment\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/tasks/3/comments",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "tasks",
+                    "3",
+                    "comments"
+                  ]
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:25:20 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Comment created successfully\",\n    \"data\": {\n        \"id\": 1,\n        \"content\": \"This is a comment\",\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"task_id\": 3,\n        \"created_at\": \"2026-02-08T12:25:20.000000Z\",\n        \"updated_at\": \"2026-02-08T12:25:20.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Update Comment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"content\": \"Updated comment\"\r\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/comments/2",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "comments",
+                "2"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Update Comment",
+              "originalRequest": {
+                "method": "PUT",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"content\": \"Updated comment\"\r\n}"
+                },
+                "url": {
+                  "raw": "{{base_url}}/api/v1/comments/2",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments",
+                    "2"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:27:10 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Comment updated successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"content\": \"Updated comment\",\n        \"author\": {\n            \"id\": 1,\n            \"name\": \"John Doe\",\n            \"email\": \"john@example.com\",\n            \"email_verified_at\": null,\n            \"created_at\": \"2026-02-08T12:09:00.000000Z\",\n            \"updated_at\": \"2026-02-08T12:09:00.000000Z\"\n        },\n        \"task_id\": 3,\n        \"created_at\": \"2026-02-08T12:26:09.000000Z\",\n        \"updated_at\": \"2026-02-08T12:27:10.000000Z\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Delete Comment",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "3|DnmGdfma781tDk5grKnmgLGr9nWnmUBzOPjHtsNxf5c2e474",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/v1/comments/3",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "comments",
+                "3"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "Delete Comment",
+              "originalRequest": {
+                "method": "DELETE",
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json",
+                    "type": "text"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json",
+                    "type": "text"
+                  }
+                ],
+                "url": {
+                  "raw": "{{base_url}}/api/v1/comments/3",
+                  "host": [
+                    "{{base_url}}"
+                  ],
+                  "path": [
+                    "api",
+                    "v1",
+                    "comments",
+                    "3"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": null,
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx/1.25.2"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Transfer-Encoding",
+                  "value": "chunked"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                },
+                {
+                  "key": "Vary",
+                  "value": "Accept-Encoding"
+                },
+                {
+                  "key": "X-Powered-By",
+                  "value": "PHP/8.4.16"
+                },
+                {
+                  "key": "Cache-Control",
+                  "value": "no-cache, private"
+                },
+                {
+                  "key": "Date",
+                  "value": "Sun, 08 Feb 2026 12:30:23 GMT"
+                },
+                {
+                  "key": "Access-Control-Allow-Origin",
+                  "value": "*"
+                },
+                {
+                  "key": "Content-Encoding",
+                  "value": "gzip"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"message\": \"Comment deleted successfully\"\n}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
