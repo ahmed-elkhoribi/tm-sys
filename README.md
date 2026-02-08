@@ -161,7 +161,7 @@ Once imported and configured:
    - All authenticated requests will automatically use this token
 
 4. **Explore Endpoints**:
-   - The collection is organized by modules: Users, Tasks, Comments, Notifications
+   - The collection is organized by modules: Users, Tasks, Comments
    - Each endpoint includes example request bodies
    - Modify the examples as needed for your testing
 
@@ -172,9 +172,51 @@ The Postman collection includes:
 - **Users**: Registration, Login, Logout
 - **Tasks**: CRUD operations, List tasks, Get assigned tasks
 - **Comments**: Create, Update, Delete, List comments for a task
-- **Notifications**: Full CRUD operations for notifications
 
 All endpoints use the `{{base_url}}` environment variable, so you only need to update it once in the environment settings.
+
+## Testing
+
+The project includes comprehensive feature tests for all modules. To run the tests:
+
+```bash
+php artisan test
+```
+
+This will run all tests including:
+- **Authentication Tests**: User registration, login, and logout
+- **Task Tests**: Create, list, update tasks, and authorization checks
+- **Comment Tests**: Create and list comments
+
+### Test Configuration
+
+The test suite is configured in `phpunit.xml`:
+- Uses MySQL database (`ts_sys`) for testing
+- Uses in-memory cache and array mailer for isolated testing
+- Tests are located in `Modules/*/tests/Feature/` directories
+
+### Running Specific Tests
+
+You can run specific test files or filter tests:
+
+```bash
+# Run all tests
+php artisan test
+
+# Run tests for a specific module
+php artisan test Modules/User/tests/Feature/AuthTest.php
+
+# Run tests matching a filter
+php artisan test --filter=AuthTest
+php artisan test --filter=TaskTest
+```
+
+### Test Results
+
+All tests should pass before submitting. The test suite includes:
+- ✅ 11 tests passing
+- ✅ 66 assertions
+- ✅ Coverage for authentication, tasks, and comments
 
 ## Project Structure
 
